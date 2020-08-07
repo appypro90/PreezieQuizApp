@@ -1,6 +1,4 @@
 
-/* Style for question pages */
-  
   .flex-container-question {
 	flex-direction: column;
 	align-items: center;
@@ -35,7 +33,6 @@
 	float: right;
   }
 
-  /*Style for front-page*/
   .flex-container-front-page {
 	padding: 10px;
 	display: flex;

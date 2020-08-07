@@ -72,6 +72,12 @@ $(document).ready(function () {
 		}
 	}
 	
+	const handleNoConnection = (error) => {
+		if(!error.statusCode().readyState) {
+			alert('No connection to the server');
+			return true;
+		}
+	}
 
 	const getQuestion = () => {
 		$.ajax({
@@ -80,13 +86,13 @@ $(document).ready(function () {
 			success: function (result) {
 				questionSetUp(result, options);
 			},
-			error: function (result) {
-				alert(result);
+			error: function (error) {
+				handleNoConnection(error);
 			}
 		});
 	}
 
-	const putQuestion = () => {
+	const patchQuestion = () => {
 		const quData = {
 			id: parseInt(questionId.val()),
 			mcqAnswerId: parseInt($("input[name='option']:checked").val()),
@@ -110,12 +116,13 @@ $(document).ready(function () {
 				}
 			},
 			error: function (error) {
-				let errorMessage;
-				(quData.questionType == questionTypeEnum.mcqAnswer) ? 
-					errorMessage = ($.parseJSON(error.responseText).errors.McqAnswerId)
-					: errorMessage = ($.parseJSON(error.responseText).errors.TextAnswer); 
-					
-				alert(errorMessage.map(e => e.replace(' Id', '')));
+				if(!handleNoConnection(error)) {
+					const errorMessage = (quData.questionType == questionTypeEnum.mcqAnswer) ? 
+						($.parseJSON(error.responseText).errors.McqAnswerId)
+						: ($.parseJSON(error.responseText).errors.TextAnswer); 
+						
+					alert(errorMessage.map(e => e.split(' Id').join('').split('\'').join('')));
+				}
 			}
 		});
 	}
@@ -135,8 +142,8 @@ $(document).ready(function () {
 					newContainer.appendTo(summaryPage);
 				})
 			},
-			error: function (result) {
-				alert(result);
+			error: function (error) {
+				handleNoConnection(error);
 			}
 		});
 	}
@@ -166,10 +173,10 @@ $(document).ready(function () {
 
 	nextButton.click(function (e) {
 		e.preventDefault();
-		putQuestion();
+		patchQuestion();
 	});
 
 	completeButton.click(function(e) {
-		putQuestion();
+		patchQuestion();
 	});
 });
