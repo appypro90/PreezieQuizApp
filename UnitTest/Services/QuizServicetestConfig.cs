@@ -1,5 +1,4 @@
-﻿using AutoFixture;
-using AutoMapper;
+﻿using AutoMapper;
 using Db;
 using Models;
 using Moq;
@@ -30,7 +29,7 @@ namespace UnitTest.Services
                 {
                     new Tuple<int, string>(1, "Cat"),
                     new Tuple<int, string>(2, "Dog"),
-                    new Tuple<int, string>(3, "cow"),
+                    new Tuple<int, string>(3, "Cow"),
                     new Tuple<int, string>(4, "kangaroo")
                 }
             },

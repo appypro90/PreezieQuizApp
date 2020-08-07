@@ -13,8 +13,6 @@ namespace UnitTest.Services
         {
         }
 
-        /// <summary>Returns the empty when no data returned from API asynchronous.</summary>
-        /// <returns></returns>
         [Test]
         public async Task ReturnAllQuestionsSuccessfully()
         {
