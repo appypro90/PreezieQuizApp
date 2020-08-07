@@ -1,0 +1,76 @@
+
+/* Style for question pages */
+  
+  .flex-container-question {
+	flex-direction: column;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	background-color: cadetblue;
+  }
+  
+  .textarea{
+	font-size: large;
+    line-height: normal;
+    font-family: auto;
+    padding: 5px;
+  }
+  .button-container {
+	padding: 8px;
+  }
+
+  .flex-container-question > div {
+	background-color:#f1f1f1;
+	width: 90%;
+	margin: 10px;
+	text-align: center;
+	line-height: 75px;
+	font-size: 30px;
+  }
+
+  .previous {
+	float: left;
+  }
+  .next {
+	float: right;
+  }
+
+  /*Style for front-page*/
+  .flex-container-front-page {
+	padding: 10px;
+	display: flex;
+    flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+    height: auto;
+	background-color: rgb(3, 104, 104);
+  }
+  
+  .flex-container-front-page > div {
+	background-color: #f1f1f1;
+	color: black;
+	width: 90%;
+	height: 90%;
+  }
+
+  .quiz {
+	text-align : center;  
+	font-family:'Franklin Gothic Medium';
+	color: rgb(0, 0, 0);
+	padding : 10px;
+  }
+
+  .quiz-text {
+	text-align : center; 
+	font-style: oblique;
+	color: rgb(63, 61, 61);
+	padding : 8px;
+
+  }
+
+  .start-btn {
+	text-align: center;
+	padding : 30px;
+
+  }

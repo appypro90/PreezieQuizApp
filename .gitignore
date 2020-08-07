@@ -1,0 +1,21 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/PreezieQuizApp
+/bin/Debug/netcoreapp2.2
+/Models/bin/Debug
+/Models/obj
+/obj
+/PreezieQuizApi/bin/Debug/netcoreapp3.1
+/PreezieQuizApi/obj
+*.user
+/Services/bin/Debug/netcoreapp3.1
+/Services/obj
+/Data/obj
+/Data/bin/Debug/netcoreapp3.1
+/UnitTest/bin/Debug/netcoreapp3.1
+/UnitTest/obj
+/Db/bin/Debug/netcoreapp3.1
+/Db/obj
+/.idea

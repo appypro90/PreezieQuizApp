@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<h1>Preezie Quiz</h1>
+	<div id="startPage" class="flex-container-front-page">
+		<div>
+			<h2 class="quiz">Welcome To Preezie Quiz!</h2>
+			<h3 class="quiz-text">You have 4 questions to answer. You will get your question and answer summery at the end.</h3>
+			<div class="start-btn">
+				<button id="start" class="btn btn-primary btn-lg">Get Started!</button>
+			</div>
+		</div>
+	</div>
+	<div id="quPage" style="display: none;" class="flex-container-question">
+		<input type="hidden" id="questionId">
+		<input type="hidden" id="questionType">
+		<div id="question-container" style="padding: 20px;">
+			<div>
+				<h3 id="question"></h3>
+				<!-- <h4 id="answer"></h4> -->
+			</div>
+			<div>
+				<form id="options" action="/action_page.php">
+				</form>
+			</div>
+		</div>
+		<div id="button-container" class="button-container">
+			
+				<button id="previous" class="btn btn-primary btn-lg previous">&laquo; Previous</button>
+				<button id="next" class="btn btn-success btn-lg next-btn next">Next &raquo;</button>
+				<button id="complete" class="btn btn-danger btn-lg next-btn next">Complete</button>
+			
+		</div>
+	</div>
+	<div id="summary-page" class="flex-container-question">
+		<div>Summary</div>
+		<div id="question-answer">
+			<h3 id="summary-question"></h3>
+			<h4 id="summary-answer"></h4>
+		</div>
+	</div>
+
+	<script src="index.js"></script>
+</body>
+
+</html>
